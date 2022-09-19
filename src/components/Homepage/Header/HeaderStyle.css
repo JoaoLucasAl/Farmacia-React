@@ -16,12 +16,12 @@
 .logo{
     height: 50px;
     width: 50px;
-    transform: translateY(-8px);
+    transform: translateY(15px);
 }
 
 .logo_text {
     display: grid;
-    /* align-items: center; */
+    align-items: center;
     margin-top: 0.25rem;
     justify-content: center;
     font-family: 'Khula';
@@ -39,6 +39,10 @@
 }
 
 .lista-item{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
     margin-top: 3%;
     margin-left: 15%;
     margin-right: 15%;
@@ -49,6 +53,12 @@
     line-height: 26px;
 }
 
+.lista-item:hover {  
+   background-color: #315264;
+   border: 1px solid #FFF;
+   border-radius: 10px;
+}
+
 
 @media screen and (max-width: 1250px){
   
@@ -57,6 +67,8 @@
         grid-template-columns: auto auto;
         margin-right: 25%;
     }
+
+    
 }
 
 @media screen and (max-width: 760px){
@@ -74,20 +86,6 @@
         grid-template-columns: 80px 80px;
     }
 
-    .logo_text {
-        display: grid;
-        /* align-items: center; */
-        justify-content: center;
-        font-family: 'Khula';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 32px;
-        transform: translateY(-8px)
-    }
-}
-
-@media screen and (max-width: 550px){
     .logo_text{
         display: none;
     }
