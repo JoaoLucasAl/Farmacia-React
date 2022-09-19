@@ -5,11 +5,11 @@ const Footer = () => {
     return (
     <footer className={style.footer}>
         <ul className={style.ul}>
-            <li>contato</li>
-            <li>sobre o projeto</li>
-            <li>repositório</li>
-            <li>sobre nós</li>
-            <li>bootcamp</li>
+            <li className={style.li}>contato</li>
+            <li className={style.li}>sobre o projeto</li>
+            <li className={style.li}>repositório</li>
+            <li className={style.li}>sobre nós</li>
+            <li className={style.li}>bootcamp</li>
         </ul>
     </footer>
     )
