@@ -16,12 +16,12 @@
 .logo{
     height: 50px;
     width: 50px;
-    transform: translateY(-8px);
+    transform: translateY(15px);
 }
 
 .logo_text {
     display: grid;
-    /* align-items: center; */
+    align-items: center;
     margin-top: 0.25rem;
     justify-content: center;
     font-family: 'Khula';
