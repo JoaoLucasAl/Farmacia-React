@@ -67,6 +67,8 @@
         grid-template-columns: auto auto;
         margin-right: 25%;
     }
+
+    
 }
 
 @media screen and (max-width: 760px){
@@ -84,20 +86,6 @@
         grid-template-columns: 80px 80px;
     }
 
-    .logo_text {
-        display: grid;
-        /* align-items: center; */
-        justify-content: center;
-        font-family: 'Khula';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 32px;
-        transform: translateY(-8px)
-    }
-}
-
-@media screen and (max-width: 550px){
     .logo_text{
         display: none;
     }
