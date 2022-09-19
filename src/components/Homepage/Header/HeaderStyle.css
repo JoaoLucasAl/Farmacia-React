@@ -39,6 +39,10 @@
 }
 
 .lista-item{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
     margin-top: 3%;
     margin-left: 15%;
     margin-right: 15%;
@@ -47,6 +51,12 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
+}
+
+.lista-item:hover {  
+   background-color: #315264;
+   border: 1px solid #FFF;
+   border-radius: 10px;
 }
 
 
