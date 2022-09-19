@@ -22,6 +22,7 @@
 .logo_text {
     display: grid;
     /* align-items: center; */
+    margin-top: 0.25rem;
     justify-content: center;
     font-family: 'Khula';
     font-style: normal;
@@ -43,7 +44,7 @@
     margin-right: 15%;
     font-family: 'Khula';
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 18px;
     line-height: 26px;
 }
