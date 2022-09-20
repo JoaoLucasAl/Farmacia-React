@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../assets/logo.png";
 import "./HeaderStyle.css";
 
-const HeaderHome = () => {
+const Header = () => {
   return (
     <header className="header">
       <div className="div-logo">
@@ -23,4 +23,4 @@ const HeaderHome = () => {
   );
 };
 
-export default HeaderHome;
+export default Header;
