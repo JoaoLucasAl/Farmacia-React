@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homemainh1 {
+    font-size: 26;
+    font-family: 'Krub';
+    font-weight: 700;
+    margin: 2rem auto 0;
+    width: 70rem;
+}
+
+.homemainp1 {
+    margin: 1rem auto;
+    width: 70rem;
+}
+
+.homemainp2 {
+    margin: 1rem auto;
+    width: 70rem;
+}
+
+a {
+    color: blue;
+}
+
+.homemaindiv {
+    width: 800px;
+    height: 400px;
+    background-color: grey;
+    margin: 0 auto;
+}
