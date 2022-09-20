@@ -1,12 +1,21 @@
 import { useState } from "react";
 import "./App.css";
-import HeaderHome from "./components/Homepage/Header/Header";
-import Footer from "./components/Homepage/Footer/Footer.jsx"
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer.jsx";
+
+import TitleCadastro from "./components/Cadastros/Title/Title";
+import MainCadastro from "./components/Cadastros/Main/Main";
 function App() {
   return (
     <div className="App">
       {/* Homepage */}
-      <HeaderHome />
+      {/* <Header />
+      <Footer /> */}
+
+      {/* Cadastros */}
+      <Header />
+      <TitleCadastro />
+      <MainCadastro />
       <Footer />
     </div>
   );
