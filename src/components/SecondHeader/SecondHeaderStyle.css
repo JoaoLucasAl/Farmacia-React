@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.SecondHeader {
+    background-color: #28536B;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    height: 300px;
+}
+
+.h2 {
+    font-size: 24px;
+    font-weight: bold;
+    width: 18rem;
+}
+
+.divOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.p {
+    font-size: 14px;
+    width: 18rem;
+}
+
+.secondheaderbutton {
+    background-color: #E9882F;
+    width: 230px;
+    height: 50px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 3.5rem;
+    margin-top: 1.5rem;
+}
+
+.secondheaderspan {
+    margin-left: 1.5rem;
+    font-family: 'Cousine';
+    font-size: 14px;
+}
+
+.blank {
+    margin: 2rem auto;
+    width: 360px;
+    height: 200px;
+    background-color: grey;
+}
