@@ -1,3 +1,4 @@
+//Permite a requisição pelo front à API
 module.exports = {
     async headers() {
         return [{
