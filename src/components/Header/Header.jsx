@@ -19,7 +19,9 @@ const Header = () => {
           <Link to="/NovoCadastros">
             <li className="lista-item">Novo cadastro</li>
           </Link>
-          <li className="lista-item">Modificar</li>
+          <Link to="/AlterarCadastros">
+            <li className="lista-item">Modificar</li>
+          </Link>
           <li className="lista-item">Contato</li>
         </ul>
       </nav>
