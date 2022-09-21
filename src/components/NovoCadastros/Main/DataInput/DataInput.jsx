@@ -48,12 +48,14 @@ const ClientesDataInput = () => {
       </div>
       <button
         className="cadastrar_btn"
-        onClick={setData({
-          NOME: nome,
-          EMAIL: email,
-          TELEFONE: telefone,
-          CPF: cpf,
-        })}
+        onClick={() => {
+          setData({
+            NOME: nome,
+            EMAIL: email,
+            TELEFONE: telefone,
+            CPF: cpf,
+          });
+        }}
       >
         CADASTRAR
       </button>
@@ -119,13 +121,15 @@ const FuncionariosDataInput = () => {
 
       <button
         className="cadastrar_btn"
-        onClick={setData({
-          NOME: nome,
-          EMAIL: email,
-          TELEFONE: telefone,
-          CARGO: cargo,
-          CPF: cpf,
-        })}
+        onClick={() => {
+          setData({
+            NOME: nome,
+            EMAIL: email,
+            TELEFONE: telefone,
+            CARGO: cargo,
+            CPF: cpf,
+          });
+        }}
       >
         CADASTRAR
       </button>
@@ -190,13 +194,15 @@ const RemediosDataInput = () => {
 
       <button
         className="cadastrar_btn"
-        onClick={setData({
-          NOME: nome,
-          PRINCIPIO_ATIVO: principio_ativo,
-          LABORATORIO: laboratorio,
-          PRECO: preco,
-          ESTOQUE: estoque,
-        })}
+        onClick={() => {
+          setData({
+            NOME: nome,
+            PRINCIPIO_ATIVO: principio_ativo,
+            LABORATORIO: laboratorio,
+            PRECO: preco,
+            ESTOQUE: estoque,
+          });
+        }}
       >
         CADASTRAR
       </button>
@@ -271,14 +277,16 @@ const VendasDataInput = () => {
       </div>
       <button
         className="cadastrar_btn"
-        onClick={setData({
-          REMEDIO_ID: remedio_id,
-          QUANTIDADE: quantidade,
-          PRECO: preco,
-          DESCONTO: desconto,
-          FUNCIONARIO_ID: funcionario_id,
-          CLIENTE_ID: cliente_id,
-        })}
+        onClick={() => {
+          setData({
+            REMEDIO_ID: remedio_id,
+            QUANTIDADE: quantidade,
+            PRECO: preco,
+            DESCONTO: desconto,
+            FUNCIONARIO_ID: funcionario_id,
+            CLIENTE_ID: cliente_id,
+          });
+        }}
       >
         CADASTRAR
       </button>
