@@ -51,13 +51,19 @@ body {
     margin-left: 1.5rem;
     font-family: 'Cousine';
     font-size: 14px;
+    float: none;
 }
 
 .blank {
     margin: 2rem auto;
-    width: 25vw;
+    width: 20vw;
     height: 25vh;
     background-color: grey;
+}
+
+img {
+    width: 20vw;
+    height: 25vh;
 }
 
 @media screen and (max-width: 760px){
