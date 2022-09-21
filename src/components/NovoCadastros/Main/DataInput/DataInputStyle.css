@@ -1,0 +1,4 @@
+.data_input {
+    display: grid;
+    grid-template-columns: auto;
+}
