@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
+import ClientesDataInput from "./DataInput/DataInput";
 import "./MainStyle.css";
 
 const MainCadastro = () => {
-  const [ route, setRoute ] = useState("");
+  const [route, setRoute] = useState("");
 
-
-
-  useEffect(() => console.log(route), [route])
+  useEffect(() => console.log(route), [route]);
   return (
     <div className="main_cadastro">
       <div className="cadastro_div">
@@ -14,15 +13,19 @@ const MainCadastro = () => {
           <p>Rota:</p>
           <select
             className="select_route"
-            onChange={ (event) => { setRoute(event.target.value)}}
+            onChange={(event) => {
+              setRoute(event.target.value);
+            }}
           >
-          <option></option>
-            {["Clientes", "Funcionários", "Vendas", "Remedios"].map((item, index) => {
-              return <option key={index}>{item}</option>;
-            })}
+            <option></option>
+            {["Clientes", "Funcionários", "Vendas", "Remedios"].map(
+              (item, index) => {
+                return <option key={index}>{item}</option>;
+              }
+            )}
           </select>
         </div>
-        <div className="input_data"></div>
+        <ClientesDataInput />
       </div>
     </div>
   );
