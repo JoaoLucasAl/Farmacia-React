@@ -1,11 +1,34 @@
 import React, { useEffect, useState } from "react";
-import ClientesDataInput from "./DataInput/DataInput";
+import {
+  ClientesDataInput,
+  FuncionariosDataInput,
+  RemediosDataInput,
+  VendasDataInput,
+} from "./DataInput/DataInput";
 import "./MainStyle.css";
 
 const MainNovoCadastro = () => {
   const [route, setRoute] = useState("");
+  const [data_input, setData_input] = useState();
 
-  useEffect(() => console.log(route), [route]);
+  useEffect(() => {
+    switch (route) {
+      case "Clientes":
+        setData_input(<ClientesDataInput />);
+        break;
+      case "Funcionários":
+        setData_input(<FuncionariosDataInput />);
+        break;
+      case "Vendas":
+        setData_input(<VendasDataInput />);
+        break;
+      case "Remédios":
+        setData_input(<RemediosDataInput />);
+        break;
+      default:
+        setData_input(<h1>Selecione uma rota</h1>);
+    }
+  }, [route]);
   return (
     <div className="main_cadastro">
       <div className="cadastro_div">
@@ -18,14 +41,15 @@ const MainNovoCadastro = () => {
             }}
           >
             <option></option>
-            {["Clientes", "Funcionários", "Vendas", "Remedios"].map(
+            {["Clientes", "Funcionários", "Vendas", "Remédios"].map(
               (item, index) => {
                 return <option key={index}>{item}</option>;
               }
             )}
           </select>
         </div>
-        <ClientesDataInput />
+        {data_input}
+
       </div>
     </div>
   );
