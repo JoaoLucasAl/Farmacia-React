@@ -1,0 +1,28 @@
+.cadastro_div {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    border-radius: 18px;
+    height: 517px;
+    background-color: #28536B;
+    color: #FFF;
+}
+
+.input_id_div{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+.select_route_div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.select_route {
+    margin-left: 5px;
+}
