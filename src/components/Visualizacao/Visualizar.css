@@ -1,0 +1,24 @@
+.title_div_visualizar{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #28536B;
+    color: #fff;
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    width: 98.79vw;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    min-height: 80vh;
+}
+
+.innerContainer {
+    margin: 5% 0 0 15%;
+}
