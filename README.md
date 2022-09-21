@@ -1,5 +1,4 @@
-# Farmacia-React
-# <h1 align="center"> API - Farmácia ⚕️ </h1>
+# <h1 align="center"> Farmacia-React ⚕️ </h1>
 
 Projeto desenvolvido no curso de Desenvolvimento Web da instituição de ensino Resilia Eduçação!
 Sendo este proposto como projeto do Módulo 5 do curso.
@@ -10,25 +9,25 @@ A SQUAD 4 foi desafiada a desenvolver os estudos de todos os 6 meses de ensino, 
 <p> 🦾 Nesse desafio, a nossa facilitadora tech, Karlla Souzza, solicitou que desenvolvessemos o conteúdo do módulo em equipe.
 <p>
   
-- DEMANDAS TECH:
+   DEMANDAS TECH:
  Implementar, utilizando a biblioteca React.js, um site que:
-● Utilize endpoints da API que foi criada no M4 com Node.Js e Express;
-● Utilizar o README.md do repositório para documentação do projeto;
-● Utilizar a biblioteca react-router-dom para roteamento das páginas;
-● Utilizar CSS Grid para definição do layout das páginas;
-● Tenha uma animação CSS para carregamento inicial do site(sem biblioteca).
+<P> ● Utilize endpoints da API que foi criada no M4 com Node.Js e Express;
+<P> ● Utilizar o README.md do repositório para documentação do projeto;
+<P> ● Utilizar a biblioteca react-router-dom para roteamento das páginas;
+<P> ● Utilizar CSS Grid para definição do layout das páginas;
+<P> ● Tenha uma animação CSS para carregamento inicial do site(sem biblioteca).
 Contenha as funcionalidades básicas do CRUD:
-● Página para listar os cadastros com opção de busca;
-● Página para incluir um novo registro;
-● Página para editar os cadastros;
-● Opção de excluir itens cadastrados.
+<P> ● Página para listar os cadastros com opção de busca;
+<P> ● Página para incluir um novo registro;
+<P> ● Página para editar os cadastros;
+<P>  Opção de excluir itens cadastrados.
   
-- DEMANDAS SOFT:
-● Todos os integrantes do grupo deverão apresentar;
-● Utilize slides de apoio para sua apresentação;
-● Seu grupo terá 15 minutos (no máximo) para apresentar;
-● Atente-se para uma apresentação formal e profissional;
-● Faça uso de todo aprendizado em comunicação e oratória que você teve ao
+   DEMANDAS SOFT:
+<P> ● Todos os integrantes do grupo deverão apresentar;
+<P> ● Utilize slides de apoio para sua apresentação;
+<P> ● Seu grupo terá 15 minutos (no máximo) para apresentar;
+<P> ● Atente-se para uma apresentação formal e profissional;
+<P> ● Faça uso de todo aprendizado em comunicação e oratória que você teve ao
 longo da jornada.
 
 # Status do Projeto 🚀
