@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./DataInputStyle.css";
 
-const ClientesDataInput = () => {
+const ClientesDataInput = (props) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -63,7 +63,7 @@ const ClientesDataInput = () => {
   );
 };
 
-const FuncionariosDataInput = () => {
+const FuncionariosDataInput = (props) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -137,7 +137,7 @@ const FuncionariosDataInput = () => {
   );
 };
 
-const RemediosDataInput = () => {
+const RemediosDataInput = (props) => {
   const [nome, setNome] = useState("");
   const [principio_ativo, setPrincipio_ativo] = useState("");
   const [laboratorio, setLaboratorio] = useState("");
@@ -210,7 +210,7 @@ const RemediosDataInput = () => {
   );
 };
 
-const VendasDataInput = () => {
+const VendasDataInput = (props) => {
   const [remedio_id, setRemedio_id] = useState("");
   const [quantidade, setQuantidade] = useState("");
   const [preco, setPreco] = useState("");
