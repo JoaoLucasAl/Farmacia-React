@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ClientesDataInput from "./DataInput/DataInput";
 import "./MainStyle.css";
 
-const MainCadastro = () => {
+const MainNovoCadastro = () => {
   const [route, setRoute] = useState("");
 
   useEffect(() => console.log(route), [route]);
@@ -31,4 +31,4 @@ const MainCadastro = () => {
   );
 };
 
-export default MainCadastro;
+export default MainNovoCadastro;

@@ -1,7 +1,7 @@
 import React from "react";
 import './TitleStyle.css'
 
-const TitleCadastro = () => {
+const TitleNovoCadastro = () => {
     return (
         <div className="title_div">
             Crie um novo cadastro, rápido e fácil
@@ -9,4 +9,4 @@ const TitleCadastro = () => {
     )
 }
 
-export default TitleCadastro
+export default TitleNovoCadastro

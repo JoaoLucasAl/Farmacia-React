@@ -1,10 +1,12 @@
 import React from "react";
-import MainCadastro from "../components/Cadastros/Main/Main";
+import MainNovoCadastro from "../components/NovoCadastros/Main/Main";
+import TitleNovoCadastro from "../components/NovoCadastros/Title/Title";
 
 const NovoCadastros = () => {
   return (
     <div>
-      <MainCadastro />
+      <TitleNovoCadastro />
+      <MainNovoCadastro />
     </div>
   );
 };
