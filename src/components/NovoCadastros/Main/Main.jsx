@@ -4,7 +4,7 @@ import {
   FuncionariosDataInput,
   RemediosDataInput,
   VendasDataInput,
-} from "../../AlterarCadastros/Main/DataInput/DataInput";
+} from "../../DataInput/DataInput";
 import "./MainStyle.css";
 
 const MainNovoCadastro = () => {
