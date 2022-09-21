@@ -16,7 +16,11 @@
 .logo{
     height: 50px;
     width: 50px;
-    transform: translateY(15px);
+}
+
+a {
+    text-decoration: none;
+    
 }
 
 .logo_text {
@@ -29,7 +33,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
-    
+    color: white;
 }
 
 .lista {
@@ -51,6 +55,7 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
+    color: white;
 }
 
 .lista-item:hover {  
@@ -75,18 +80,34 @@
   
     .lista {
         display: grid;
+        width: 25vw;
         grid-template-columns: auto;
-        margin-right: 25%;
+        margin: 0 auto;
     }
     .div-logo{
-        
-        margin-left: 25%;
+        margin-left: 10vw;
+        margin-top: 4vh;
         display: grid;
-        align-items: center;
+        width: 3vw;
         grid-template-columns: 80px 80px;
+    }
+    
+    .header {
+        grid-template-columns: 18vw auto;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        width: 18vw;
+        height: 8vh;
     }
 
     .logo_text{
         display: none;
+    }
+
+    .nav {
+        width: 57vw;
     }
 }

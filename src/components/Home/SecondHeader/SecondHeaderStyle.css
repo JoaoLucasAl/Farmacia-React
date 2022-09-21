@@ -2,9 +2,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    width: 100%;
+}
 
 .SecondHeader {
     background-color: #28536B;
+    width: 100%;
     color: white;
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -51,7 +55,35 @@
 
 .blank {
     margin: 2rem auto;
-    width: 360px;
-    height: 200px;
+    width: 25vw;
+    height: 25vh;
     background-color: grey;
 }
+
+@media screen and (max-width: 760px){
+    .SecondHeader {
+        grid-template-columns: repeat(1, auto);
+        height: 70vh;
+    }
+
+    .secondheaderspan {
+        flex-wrap:wrap;
+    }
+
+    .h2 {
+        margin-top: 2rem;
+    }
+
+    .divTwo {
+        width: 80vw;
+        display: grid;
+        height: 15vh;
+        text-align: center;
+    }
+    .secondheaderbutton {
+        margin: 1rem auto;
+    }
+    .blank{
+        width: 60vw;
+    }
+ }

@@ -8,17 +8,17 @@
     font-family: 'Krub';
     font-weight: 700;
     margin: 2rem auto 0;
-    width: 70rem;
+    width: 70vw;
 }
 
 .homemainp1 {
     margin: 1rem auto;
-    width: 70rem;
+    width: 70vw;
 }
 
 .homemainp2 {
     margin: 1rem auto;
-    width: 70rem;
+    width: 70vw;
 }
 
 a {
@@ -26,8 +26,14 @@ a {
 }
 
 .homemaindiv {
-    width: 800px;
-    height: 400px;
+    width: 70vw;
+    height: 70vh;
     background-color: grey;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 760px) {
+    .homemaindiv {
+        height: 30vh;
+    }
 }
