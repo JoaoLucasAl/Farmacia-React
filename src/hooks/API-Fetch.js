@@ -1,6 +1,6 @@
 class API_Fetch {
-  constructor(url) {
-    this.url = url;
+  constructor() {
+    this.url = 'https://api-farmacia-m4.herokuapp.com/';
   }
 
   // Rota -> Clientes
@@ -192,3 +192,5 @@ class API_Fetch {
     }
   }
 }
+
+export default API_Fetch
