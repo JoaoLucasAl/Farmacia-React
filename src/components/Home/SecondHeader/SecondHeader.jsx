@@ -13,7 +13,7 @@ const SecondHeader = () => {
                 </div>
             </div>
             <div className='blank'>
-                
+                <img src="src/assets/rest.png" alt="" />
             </div>
         </section>
     )
