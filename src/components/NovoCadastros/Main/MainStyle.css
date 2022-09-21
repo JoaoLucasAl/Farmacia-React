@@ -1,22 +1,30 @@
 .cadastro_div {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: 8rem auto;
     border-radius: 18px;
-    height: 517px;
+    width: 30vw;
+    height: 48vh;
     background-color: #28536B;
     color: #FFF;
 }
 
 .select_route_div {
-    display: grid;
-    grid-template-columns: auto auto;
+  display: flex;
+  margin: 2rem auto;
 }
 .select_route {
-    margin-left: 5px;
+    margin-left: 1rem;
+    width: 8vw;
+}
+
+input {
+   float: right;
+   width: 60%;
+}
+
+p{
+    font-family: 'Krub';
+    font-size: 24px;
 }

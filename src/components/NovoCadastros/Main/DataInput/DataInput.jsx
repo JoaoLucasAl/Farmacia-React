@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./DataInputStyle.css";
+import { useForm } from 'react-hook-form';
 
 const ClientesDataInput = () => {
   const [nome, setNome] = useState("");
@@ -8,16 +9,20 @@ const ClientesDataInput = () => {
   const [cpf, setCpf] = useState("");
   const [data, setData] = useState({});
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = date => console.log(date);
+
   return (
-    <div className="data_input">
+    <form className="data_input" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label>Nome:</label>
-        <input
+        <input name='nome' {...register("nome", { required: true, minLength: 10 })}
           type="text"
           onChange={(event) => {
             setNome(event.target.value);
           }}
         />
+        {errors.nome && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Email:</label>
@@ -26,7 +31,15 @@ const ClientesDataInput = () => {
           onChange={(event) => {
             setEmail(event.target.value);
           }}
+          name='email'
+          {...register("email", {
+            required: true, pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              message: 'Enter a valid e-mail address',
+            }
+          })}
         />
+        {errors.email && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Telefone:</label>
@@ -35,7 +48,15 @@ const ClientesDataInput = () => {
           onChange={(event) => {
             setTelefone(event.target.value);
           }}
+          name="telefone"
+          {...register("telefone", {
+            required: true, pattern: {
+              value: /^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/,
+              message: 'Enter a valid cell phone number',
+            }
+          })}
         />
+        {errors.telefone && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>CPF:</label>
@@ -44,7 +65,15 @@ const ClientesDataInput = () => {
           onChange={(event) => {
             setCpf(event.target.value);
           }}
+          name='cpf'
+          {...register("cpf", {
+            required: true, pattern: {
+              value: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/,
+              message: 'CPF inválido ',
+            }
+          })}
         />
+        {errors.cpf && <span>Esse campo é obrigatório.</span>}
       </div>
       <button
         className="cadastrar_btn"
@@ -59,7 +88,7 @@ const ClientesDataInput = () => {
       >
         CADASTRAR
       </button>
-    </div>
+    </form>
   );
 };
 
@@ -71,8 +100,11 @@ const FuncionariosDataInput = () => {
   const [cpf, setCpf] = useState("");
   const [data, setData] = useState({});
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = date => console.log(date);
+
   return (
-    <div className="data_input">
+    <form className="data_input" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label>Nome:</label>
         <input
@@ -80,7 +112,9 @@ const FuncionariosDataInput = () => {
           onChange={(event) => {
             setNome(event.target.value);
           }}
+          name='nome' {...register("nome", { required: true, minLength: 10 })}
         />
+        {errors.nome && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Email:</label>
@@ -89,7 +123,15 @@ const FuncionariosDataInput = () => {
           onChange={(event) => {
             setEmail(event.target.value);
           }}
+          name='email'
+          {...register("email", {
+            required: true, pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              message: 'Enter a valid e-mail address',
+            }
+          })}
         />
+        {errors.email && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Telefone:</label>
@@ -98,7 +140,15 @@ const FuncionariosDataInput = () => {
           onChange={(event) => {
             setTelefone(event.target.value);
           }}
+          name="telefone"
+          {...register("telefone", {
+            required: true, pattern: {
+              value: /^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/,
+              message: 'Enter a valid cell phone number',
+            }
+          })}
         />
+        {errors.telefone && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Cargo:</label>
@@ -107,7 +157,9 @@ const FuncionariosDataInput = () => {
           onChange={(event) => {
             setCargo(event.target.value);
           }}
+          name='cargo' {...register("cargo", { required: true, minLength: 10 })}
         />
+        {errors.cargo && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>CPF:</label>
@@ -116,7 +168,15 @@ const FuncionariosDataInput = () => {
           onChange={(event) => {
             setCpf(event.target.value);
           }}
+          name='cpf'
+          {...register("cpf", {
+            required: true, pattern: {
+              value: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/,
+              message: 'CPF inválido ',
+            }
+          })}
         />
+        {errors.cpf && <span>Esse campo é obrigatório.</span>}
       </div>
 
       <button
@@ -133,7 +193,7 @@ const FuncionariosDataInput = () => {
       >
         CADASTRAR
       </button>
-    </div>
+    </form>
   );
 };
 
@@ -144,8 +204,12 @@ const RemediosDataInput = () => {
   const [preco, setPreco] = useState("");
   const [estoque, setEstoque] = useState("");
   const [data, setData] = useState({});
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = date => console.log(date);
+
   return (
-    <div className="data_input">
+    <form className="data_input" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label>Nome:</label>
         <input
@@ -153,7 +217,9 @@ const RemediosDataInput = () => {
           onChange={(event) => {
             setNome(event.target.value);
           }}
+          name='nome' {...register("nome", { required: true, minLength: 10 })}
         />
+        {errors.nome && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Princípio ativo:</label>
@@ -162,7 +228,9 @@ const RemediosDataInput = () => {
           onChange={(event) => {
             setPrincipio_ativo(event.target.value);
           }}
+          name='princip' {...register("princip", { required: true, minLength: 5 })}
         />
+        {errors.princip && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Laboratório:</label>
@@ -171,7 +239,9 @@ const RemediosDataInput = () => {
           onChange={(event) => {
             setLaboratorio(event.target.value);
           }}
+          name='lab' {...register("lab", { required: true, minLength: 5 })}
         />
+        {errors.lab && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Preço:</label>
@@ -180,7 +250,15 @@ const RemediosDataInput = () => {
           onChange={(event) => {
             setPreco(event.target.value);
           }}
+          name='preco'
+          {...register("preco", {
+            required: true, pattern: {
+              value: /[0-9]/,
+              message: 'Insira um preço válido',
+            }
+          })}
         />
+        {errors.preco && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Estoque:</label>
@@ -189,7 +267,15 @@ const RemediosDataInput = () => {
           onChange={(event) => {
             setEstoque(event.target.value);
           }}
+          name='estoque'
+          {...register("estoque", {
+            required: true, pattern: {
+              value: /[0-9]/,
+              message: 'Insira um valor válido',
+            }
+          })}
         />
+        {errors.estoque && <span>Esse campo é obrigatório.</span>}
       </div>
 
       <button
@@ -206,7 +292,7 @@ const RemediosDataInput = () => {
       >
         CADASTRAR
       </button>
-    </div>
+    </form>
   );
 };
 
@@ -219,8 +305,11 @@ const VendasDataInput = () => {
   const [cliente_id, setCliente_id] = useState("");
   const [data, setData] = useState({});
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+
   return (
-    <div className="data_input">
+    <form className="data_input" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label>Remédio ID:</label>
         <input
@@ -228,6 +317,7 @@ const VendasDataInput = () => {
           onChange={(event) => {
             setRemedio_id(event.target.value);
           }}
+          
         />
       </div>
       <div>
@@ -237,7 +327,15 @@ const VendasDataInput = () => {
           onChange={(event) => {
             setQuantidade(event.target.value);
           }}
+          name='qnt'
+          {...register("qnt", {
+            required: true, pattern: {
+              value: /[0-9]/,
+              message: 'Insira um preço válido',
+            }
+          })}
         />
+        {errors.qnt && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Preço:</label>
@@ -246,7 +344,15 @@ const VendasDataInput = () => {
           onChange={(event) => {
             setPreco(event.target.value);
           }}
+          name='preco'
+          {...register("preco", {
+            required: true, pattern: {
+              value: /[0-9]/,
+              message: 'Insira um preço válido',
+            }
+          })}
         />
+        {errors.preco && <span>Esse campo é obrigatório.</span>}
       </div>
       <div>
         <label>Desconto:</label>
@@ -290,7 +396,7 @@ const VendasDataInput = () => {
       >
         CADASTRAR
       </button>
-    </div>
+    </form>
   );
 };
 
