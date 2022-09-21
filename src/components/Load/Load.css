@@ -1,0 +1,34 @@
+@keyframes load {
+    0% {
+      box-shadow: 0 0 orange inset;
+    }
+
+    25% {
+      box-shadow: 0 -90px orange inset;
+    }
+
+    45% {
+      box-shadow: 0 -220px orange inset;
+    }
+
+    65% {
+      box-shadow: 0 -420px orange inset;
+    }
+
+    100% {
+      box-shadow: 0 -620px orange inset;
+    }
+  }
+
+  .loader {
+    border-radius: 50%;
+    animation: load 3.5s linear infinite alternate;
+  }
+
+  .tela-load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+  }
