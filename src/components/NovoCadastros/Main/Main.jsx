@@ -10,20 +10,24 @@ import "./MainStyle.css";
 const MainNovoCadastro = () => {
   const [route, setRoute] = useState("");
   const [data_input, setData_input] = useState();
-
+  const [data, setData] = useState({});
+  const childToParent = (childData) => {
+    setData(childData);
+  };
+  useEffect(() => console.log(data), [data]);
   useEffect(() => {
     switch (route) {
       case "Clientes":
-        setData_input(<ClientesDataInput />);
+        setData_input(<ClientesDataInput childToParent={childToParent} />);
         break;
       case "Funcionários":
-        setData_input(<FuncionariosDataInput />);
+        setData_input(<FuncionariosDataInput childToParent={childToParent} />);
         break;
       case "Vendas":
-        setData_input(<VendasDataInput />);
+        setData_input(<VendasDataInput childToParent={childToParent} />);
         break;
       case "Remédios":
-        setData_input(<RemediosDataInput />);
+        setData_input(<RemediosDataInput childToParent={childToParent} />);
         break;
       default:
         setData_input(<h1>Selecione uma rota</h1>);
@@ -49,7 +53,6 @@ const MainNovoCadastro = () => {
           </select>
         </div>
         {data_input}
-
       </div>
     </div>
   );
