@@ -9,7 +9,6 @@ const ClientesDataInput = (props) => {
   const [cpf, setCpf] = useState("");
   const [data, setData] = useState({});
 
-  useEffect( () => props.childToParent(data), [data])
 
   const {
     register,
@@ -60,11 +59,11 @@ const ClientesDataInput = (props) => {
           name="telefone"
           {...register("telefone", {
             required: true,
-            pattern: {
-              value:
-                /^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/,
-              message: "Enter a valid cell phone number",
-            },
+            // pattern: {
+            //   value:
+            //     /^(?:\+)[0-9]{2}\s?(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/,
+            //   message: "Enter a valid cell phone number",
+            // },
           })}
         />
         {errors.telefone && <span>Esse campo é obrigatório.</span>}
