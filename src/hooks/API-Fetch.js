@@ -1,6 +1,6 @@
 class API_Fetch {
   constructor() {
-    this.url = 'https://api-farmacia-m4.herokuapp.com/';
+    this.url = 'https://api-farmacia-m4.herokuapp.com';
   }
 
   // Rota -> Clientes
@@ -129,6 +129,68 @@ class API_Fetch {
     }
   }
 
+  // Rota -> Remedios
+
+  async getAllRemedios() {
+    try {
+      let resp = await fetch(`${this.url}/remedios`);
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async getRemedioByID(id) {
+    try {
+      let resp = await fetch(`${this.url}/remedios/:${id}`);
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async postNovoRemedio(data) {
+    try {
+      let resp = await fetch(`${this.url}/remedios`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async deleteRemedio(id) {
+    try {
+      let resp = await fetch(`${this.url}/remedios/:${id}`, {
+        method: "DELETE",
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async putRemedio(data, id) {
+    try {
+      let resp = await fetch(`${this.url}/remedios/:${id}`, {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
   // Rota -> Vendas
 
   async getAllVendas() {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import API_Fetch from "../../../hooks/API-Fetch";
 import {
   ClientesDataInput,
   FuncionariosDataInput,
@@ -8,6 +9,7 @@ import {
 import "./MainStyle.css";
 
 const MainNovoCadastro = () => {
+  const API = new API_Fetch();
   const [route, setRoute] = useState("");
   const [data_input, setData_input] = useState();
   const [data, setData] = useState({});
@@ -15,6 +17,24 @@ const MainNovoCadastro = () => {
     setData(childData);
   };
   useEffect(() => console.log(data), [data]);
+  useEffect(() => {
+    switch (route) {
+      case "Clientes":
+        API.postNovoCliente(data);
+        break;
+      case "Funcionários":
+        API.postNovoFuncionario(data);
+        break;
+      case "Vendas":
+        API.postNovaVenda(data);
+        break;
+      case "Remédios":
+        API.postNovoRemedio(data);
+        break;
+      default:
+    }
+  }, [data]);
+
   useEffect(() => {
     switch (route) {
       case "Clientes":
