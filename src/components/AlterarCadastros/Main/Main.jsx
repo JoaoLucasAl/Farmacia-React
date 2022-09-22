@@ -17,11 +17,7 @@ const MainAlterarCadastro = () => {
     setData(childData);
   };
 
-  useEffect(() => {
-    if (data.telefone != "") {
-      console.log(data);
-    }
-  }, [data]);
+  useEffect(() => console.log(data), [data]);
   const API = new API_Fetch();
 
   useEffect(() => {
