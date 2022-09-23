@@ -1,6 +1,6 @@
 class API_Fetch {
   constructor() {
-    this.url = 'https://api-farmacia-m4.herokuapp.com/';
+    this.url = 'https://api-farmacia-m4.herokuapp.com';
   }
 
   // Rota -> Clientes
@@ -17,7 +17,7 @@ class API_Fetch {
 
   async getClienteByID(id) {
     try {
-      let resp = await fetch(`${this.url}/clientes/:${id}`);
+      let resp = await fetch(`${this.url}/clientes/${id}`);
       resp = await resp.json();
       return resp;
     } catch (e) {
@@ -41,7 +41,7 @@ class API_Fetch {
 
   async deleteCliente(id) {
     try {
-      let resp = await fetch(`${this.url}/clientes/:${id}`, {
+      let resp = await fetch(`${this.url}/clientes/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json; charset=UTF-8" },
       });
@@ -54,7 +54,7 @@ class API_Fetch {
 
   async putCliente(data, id) {
     try {
-      let resp = await fetch(`${this.url}/clientes/:${id}`, {
+      let resp = await fetch(`${this.url}/clientes/${id}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -80,7 +80,7 @@ class API_Fetch {
 
   async getFuncionarioByID(id) {
     try {
-      let resp = await fetch(`${this.url}/funcionarios/:${id}`);
+      let resp = await fetch(`${this.url}/funcionarios/${id}`);
       resp = await resp.json();
       return resp;
     } catch (e) {
@@ -104,7 +104,7 @@ class API_Fetch {
 
   async deleteFuncionario(id) {
     try {
-      let resp = await fetch(`${this.url}/funcionarios/:${id}`, {
+      let resp = await fetch(`${this.url}/funcionarios/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json; charset=UTF-8" },
       });
@@ -117,7 +117,7 @@ class API_Fetch {
 
   async putFuncionario(data, id) {
     try {
-      let resp = await fetch(`${this.url}/funcionarios/:${id}`, {
+      let resp = await fetch(`${this.url}/funcionarios/${id}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -129,6 +129,68 @@ class API_Fetch {
     }
   }
 
+  // Rota -> Remedios
+
+  async getAllRemedios() {
+    try {
+      let resp = await fetch(`${this.url}/remedios`);
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async getRemedioByID(id) {
+    try {
+      let resp = await fetch(`${this.url}/remedios/${id}`);
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async postNovoRemedio(data) {
+    try {
+      let resp = await fetch(`${this.url}/remedios`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async deleteRemedio(id) {
+    try {
+      let resp = await fetch(`${this.url}/remedios/${id}`, {
+        method: "DELETE",
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async putRemedio(data, id) {
+    try {
+      let resp = await fetch(`${this.url}/remedios/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
+      resp = await resp.json();
+      return resp;
+    } catch (e) {
+      console.error(e);
+    }
+  }
   // Rota -> Vendas
 
   async getAllVendas() {
@@ -143,7 +205,7 @@ class API_Fetch {
 
   async getVendaByID(id) {
     try {
-      let resp = await fetch(`${this.url}/vendas/:${id}`);
+      let resp = await fetch(`${this.url}/vendas/${id}`);
       resp = await resp.json();
       return resp;
     } catch (e) {
@@ -167,7 +229,7 @@ class API_Fetch {
 
   async deleteVenda(id) {
     try {
-      let resp = await fetch(`${this.url}/vendas/:${id}`, {
+      let resp = await fetch(`${this.url}/vendas/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json; charset=UTF-8" },
       });
@@ -180,7 +242,8 @@ class API_Fetch {
 
   async putVenda(data, id) {
     try {
-      let resp = await fetch(`${this.url}/vendas/:${id}`, {
+
+      let resp = await fetch(`${this.url}/vendas/${id}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: { "Content-type": "application/json; charset=UTF-8" },

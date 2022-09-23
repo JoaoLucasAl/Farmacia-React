@@ -9,6 +9,7 @@ import {
 import "./MainStyle.css";
 
 const MainAlterarCadastro = () => {
+  const API = new API_Fetch();
   const [route, setRoute] = useState("");
   const [data_input, setData_input] = useState();
   const [id, setId] = useState("");
@@ -17,8 +18,26 @@ const MainAlterarCadastro = () => {
     setData(childData);
   };
 
+  useEffect(() => console.log(id), [id]);
   useEffect(() => console.log(data), [data]);
-  const API = new API_Fetch();
+
+  useEffect(() => {
+    switch (route) {
+      case "Clientes":
+        API.putCliente(data, id);
+        break;
+      case "Funcionários":
+        API.putFuncionario(data, id);
+        break;
+      case "Vendas":
+        API.putVenda(data, id);
+        break;
+      case "Remédios":
+        API.putRemedio(data, id);
+        break;
+      default:
+    }
+  }, [data]);
 
   useEffect(() => {
     switch (route) {

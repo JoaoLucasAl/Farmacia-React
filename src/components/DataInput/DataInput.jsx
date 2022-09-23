@@ -256,7 +256,7 @@ const VendasDataInput = (props) => {
       REMEDIO_ID: date.REMEDIO_ID,
       QUANTIDADE: parseInt(date.QUANTIDADE),
       PRECO: parseFloat(date.PRECO),
-      DESCONTO: parseFloat(date.DESCONTO),
+      DESCONTO: date.DESCONTO,
       FUNCIONARIO_ID: date.FUNCIONARIO_ID,
       CLIENTE_ID: date.CLIENTE_ID,
     });
@@ -307,7 +307,7 @@ const VendasDataInput = (props) => {
       <div>
         <label>Desconto:</label>
         <input
-          type="float"
+          type="text"
           name="DESCONTO"
           {...register("DESCONTO", {
             required: true,
