@@ -24,16 +24,16 @@ const MainAlterarCadastro = () => {
   useEffect(() => {
     switch (route) {
       case "Clientes":
-        API.putCliente(id, data);
+        API.putCliente(data, id);
         break;
       case "Funcionários":
-        API.putFuncionario(id, data);
+        API.putFuncionario(data, id);
         break;
       case "Vendas":
-        API.putVenda(id, data);
+        API.putVenda(data, id);
         break;
       case "Remédios":
-        API.putRemedio(id, data);
+        API.putRemedio(data, id);
         break;
       default:
     }
